@@ -1,4 +1,4 @@
-# SimpleUId
+# SimpleUI
 
 A couple of UI components for simple dashboard made with Vue3 and SCSS.
 
