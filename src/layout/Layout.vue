@@ -26,6 +26,8 @@
 						<router-link href="#register" class="sideMnuLink" title="Register" />
 						<router-link href="#asdfasf" class="sideMnuLink" title="404" />
 					</menu-group>
+					<div class="sideMenuDivider"></div>
+					<a class="sideMnuLink" href="https://github.com/pa2lo/simpleui" target="_blank"><icon class="link-icon" name="github"/><span class="link-title">GitHub</span></a>
 				</div>
 			</div>
 			<div class="sidebarDarkThemeCont mta">
