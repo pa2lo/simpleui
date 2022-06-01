@@ -1,0 +1,19 @@
+.bedges {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 0.375rem;
+}
+.bedge {
+	padding: 0.125rem 0.75rem;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	color: var(--accent);
+	background: var(--accentLight);
+	border: 1px solid var(--accentLight);
+	border-radius: var(--border-radius);
+	font-weight: 600;
+	font-size: 0.75rem;
+	cursor: default;
+	line-height: 1.25;
+}

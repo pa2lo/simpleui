@@ -1,0 +1,122 @@
+.dropdown-container {
+	position: relative;
+}
+.dropdown-pop {
+	position: absolute;
+	background: var(--sectionBg);
+	border-radius: var(--border-radius);
+	box-shadow: var(--componentShadow);
+	min-width: 10rem;
+	max-width: 24rem;
+	z-index: 5;
+	margin: 0.25rem -0.25rem;
+	overflow: hidden;
+	top: 100%;
+	left: 0;
+	&.top {
+		top: auto;
+		bottom: 100%;
+	}
+	&.right {
+		left: auto;
+		right: 0;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+.dropdown-toggler {
+	all: inherit;
+	display: block;
+	cursor: pointer;
+	margin: 0;
+	&.button .chevron {
+		margin-right: 0;
+		&:last-child {
+			margin-right: -0.5em;
+		}
+		&:first-child {
+			margin-left: -0.5em;
+		}
+	}
+	&.button.narrow .chevron {
+		&:last-child {
+			margin-right: -0.25em;
+		}
+		&:first-child {
+			margin-left: -0.25em;
+		}
+	}
+	.chevron {
+		transition: var(--transition);
+	}
+	&.active {
+		.chevron {
+			transform: scaleY(-1);
+		}
+	}
+}
+.dd-divider {
+	border-top: 1px solid var(--sectionBorder);
+	margin: 0.625rem 0;
+}
+.dd-header {
+	background: linear-gradient(var(--sectionHeader), var(--sectionBg));
+	padding: 0.625rem 1rem;
+}
+.dd-body {
+	padding: 0.625rem 0;
+	margin: 0 1rem;
+}
+.dd-footer {
+	border-top: 1px solid var(--sectionBorder);
+	padding: 0.625rem 0;
+	margin: 0 1rem;
+}
+.dd-header + .dd-body {
+	border-top: 1px solid var(--sectionBorder);
+}
+.dd-link {
+	display: block;
+	margin: -0.125rem -.5rem;
+	padding: 0.375em 0.625rem;
+	font-family: inherit;
+	font-size: 0.875rem;
+	border-radius: var(--border-radius);
+	color: var(--link);
+	background: transparent;
+	line-height: inherit;
+	text-align: left;
+	border: none;
+	transition: var(--transition);
+	white-space: nowrap;
+	cursor: pointer;
+	text-decoration: none;
+	.bi {
+		margin-right: 0.5em;
+	}
+	&:focus {
+		outline: none;
+	}
+	&:hover, &:focus {
+		color: var(--linkHover);
+		background: var(--linkHoverBg);
+	}
+	& + .dd-link {
+		margin-top: 0.125rem;
+	}
+}
+.dropdown-enter-active,
+.dropdown-leave-active {
+	transition: var(--transition);
+	will-change: opacity, transform;
+	pointer-events: none;
+}
+.dropdown-enter-from,
+.dropdown-leave-to {
+	transform: translateY(1rem);
+	opacity: 0;
+	&.top {
+		transform: translateY(-1rem);
+	}
+}

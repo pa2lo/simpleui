@@ -1,0 +1,57 @@
+.loginContVars {
+	--leftSpace: clamp(1rem, 2vw, 5rem);
+	--lineSpacing: var(--cardSpacing);
+}
+
+.cl-logo {
+	font-size: 4em;
+	color: var(--linkHover);
+	font-weight: 900;
+	line-height: 1;
+	margin-bottom: var(--lineSpacing);
+	text-shadow: 0 0 0.25em rgba(var(--linkHoverRgb), 0.15);
+}
+
+.container-split {
+	display: flex;
+	padding-top: 0.75rem;
+	padding-bottom: 1rem;
+	justify-content: center;
+	align-items: center;
+	background: var(--sectionBg);
+	position: relative;
+	z-index: 1;
+	padding-left: var(--leftSpace);
+	width: clamp(min(calc(100vw - 1rem), 22.5rem), 32%, 34rem);
+	font-size: clamp(0.875rem, 0.8000rem + 0.3333vw, 1rem);
+	.container-split-inner {
+		max-width: 26rem;
+		width: 100%;
+		padding: var(--componentSpacing);
+	}
+}
+.wave-split {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	padding-left: var(--leftSpace);
+	color: var(--sectionBg);
+	flex: 1 1 0;
+	overflow: hidden;
+	background: linear-gradient(225deg, hsl(204, 79%, 47%), hsl(236, 85%, 65%));
+	svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		height: 100vh;
+		filter: drop-shadow(0 0 1rem rgba(0, 10, 20, .65));
+	}
+}
+
+.button.social-login-btn {
+	font-size: 1.5em;
+	padding: 0.4375em;
+	line-height: 1;
+	border-radius: 2em;
+}
